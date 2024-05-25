@@ -67,7 +67,7 @@ if (isset($_POST['send_email'])) {
             $_SESSION['error_message'] = "<p class='text-danger text-center'>Oups, quelque chose ne s'est pas déroulé correctement, réessayez plus tard</p>";
         }
     }
-    header("location:index.php");
+    header("location:index.html");
 } else {
-    header("location:index.php");
+    header("location:index.html");
 }
