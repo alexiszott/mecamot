@@ -13,9 +13,7 @@
     <script src="dist/js/jQuery.js"></script>
     <script src="library/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/section_anchor.js"></script>
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init({
@@ -35,8 +33,9 @@
             <div class="mx-auto d-block d-md-none">
                 <img src="img/others/logo_mecamot.svg" style="width: 200px">
             </div>
+
             <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler mx-5" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <button class="navbar-toggler mx-5" data-bs-toggle="collapse" data-bs-target="#navbarToggleMobile" aria-controls="navbarToggleMobile" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -44,16 +43,17 @@
             <div class="float-start mx-5 text-center d-none d-md-block ">
                 <img src="img/others/logo_mecamot.svg" style="width: 250px">
             </div>
-            <div class="collapse navbar-collapse justify-content-end mx-5" id="collapsibleNavbar">
+
+            <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarToggleMobile">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#top_page">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" id="prestations" href="#" role="button"
+                            <a class="nav-link dropdown-toggle" id="prestations" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Prestation
+                                Prestations
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" onclick="goToAnchor('motoculture_section')">Motoculture</a>
@@ -225,7 +225,7 @@
                     </tr>
                     </thead>
 
-                    <form>
+                    <form onsubmit="emailSend()">
 
                         <tr>
                             <th><input class='m-2 form-control' type='text' placeholder='Nom'
@@ -244,7 +244,7 @@
                         <tr>
                             <th class='text-center m-2'><input class='m-2 btn btn-success btn-lg'
                                                                style='background: var(--dark-green);'
-                                                               type='submit' onclick="emailSend()" name='send_email'
+                                                               type='submit' name='send_email'
                                                                id="send_email"
                                                                value='Envoyer'>
                             </th>

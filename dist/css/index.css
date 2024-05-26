@@ -38,6 +38,30 @@ a{
     text-justify: inter-word;
 }
 
+.shadow-big {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.shadow-big-txt {
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Nav bar */
+
+@media (pointer: coarse) {
+    .dropdown-menu{
+        background-color: transparent;
+        border: none;
+        transition: all 0.5s;
+    }
+
+    .dropdown-item{
+        color: white;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+}
+
 .navbar .navbar-nav .nav-item {
     position: relative;
 }
@@ -60,13 +84,17 @@ a{
     width: 100%;
 }
 
-.shadow-big {
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+.dropdown-menu{
+    background-color: #1a1d20;
 }
 
-.shadow-big-txt {
-    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.dropdown-item{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
 }
+
+/* CAROUSEL MOTOCULTURE */
 
 .carousel-item img {
     width: 100%;
@@ -108,6 +136,8 @@ a{
     transform: translateX(0);
 }
 
+/* BACKGROUND TITRE */
+
 #bg_animated {
     box-sizing: border-box;
     margin: 0;
@@ -138,6 +168,8 @@ a{
         background-position: var(--backgroundSize) var(--backgroundSize);
     }
 }
+
+/* GOOGLE MAP */
 
 .map-container {
     position: relative;

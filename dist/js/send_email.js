@@ -6,8 +6,6 @@ function emailSend(){
         texte_contact : document.getElementById('texte_contact').value,
     }
 
-    console.log(params);
-
     emailjs.send('service_s8v0vlu','template_py0w2kv', params).then(
         (response) => {
             console.log('SUCCESS!', response.status, response.text);
