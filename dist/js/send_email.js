@@ -8,10 +8,10 @@ function emailSend(){
 
     emailjs.send('service_s8v0vlu','template_py0w2kv', params).then(
         (response) => {
-            console.log('SUCCESS!', response.status, response.text);
+            alert("Email envoyé.");
         },
         (error) => {
-            console.log('FAILED...', error);
+            alert("Une erreur s'est produite. Veuillez réessayer.");
         },
     )
 }
