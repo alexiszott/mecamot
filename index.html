@@ -8,19 +8,6 @@
 
     <link rel="stylesheet" href="library/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/index.css">
-
-    <script src="https://kit.fontawesome.com/a1eb6e4109.js" crossorigin="anonymous"></script>
-    <script src="dist/js/jQuery.js"></script>
-    <script src="library/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="dist/js/section_anchor.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "EAOlP_KtZFgh-f39I",
-            });
-        })();
-    </script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -35,7 +22,8 @@
             </div>
 
             <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler mx-5" data-bs-toggle="collapse" data-bs-target="#navbarToggleMobile" aria-controls="navbarToggleMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mx-5" data-bs-toggle="collapse" data-bs-target="#navbarToggleMobile"
+                    aria-controls="navbarToggleMobile" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -225,31 +213,33 @@
                     </tr>
                     </thead>
 
-                    <form onsubmit="emailSend()">
-
+                    <form id="contact-form">
                         <tr>
-                            <th><input class='m-2 form-control' type='text' placeholder='Nom'
-                                       name='name_contact' id="name_contact"></th>
-                        </tr>
-
-                        <tr>
-                            <th><input class='m-2 form-control' type='email' placeholder='Email *'
-                                       name='email_contact' id="email_contact" required></th>
-                        </tr>
-
-                        <tr>
-                            <th><textarea class='m-2 form-control' type='text' placeholder='Message *' rows='7'
-                                          name='texte_contact' id="texte_contact" required></textarea></th>
-                        </tr>
-                        <tr>
-                            <th class='text-center m-2'><input class='m-2 btn btn-success btn-lg'
-                                                               style='background: var(--dark-green);'
-                                                               type='submit' name='send_email'
-                                                               id="send_email"
-                                                               value='Envoyer'>
+                            <th>
+                                <input class='m-2 form-control' type='text' placeholder='Nom' name='name_contact'
+                                       id="name_contact">
                             </th>
                         </tr>
-
+                        <tr>
+                            <th>
+                                <input class='m-2 form-control' type='email' placeholder='Email *'
+                                       name='email_contact' id="email_contact" required>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                    <textarea class='m-2 form-control' type='text' placeholder='Message *' rows='7'
+                                              name='texte_contact' id="texte_contact" required></textarea>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class='text-center m-2'>
+                                <button class='m-2 btn btn-success btn-lg' style='background: var(--dark-green);'
+                                        type='submit' value='Envoyer'>Envoyer
+                                </button>
+                            </th>
+                        </tr>
+                    </form>
                 </table>
             </div>
             <div class='col-md'>
@@ -271,25 +261,46 @@
             </div>
         </div>
     </div>
+
+    <!-- MODALE VALIDATE -->
+
+    <div class="modal fade" id="valideEmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Email envoyé !</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <dotlottie-player class="mx-auto"
+                                      src="https://lottie.host/7a3c80ff-a6a0-4474-b6ea-ea66db1dd7da/COCILADnAr.json"
+                                      background="transparent" speed="0.75"
+                                      style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE ERROR -->
+
+    <div class="modal fade" id="errorEmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Une erreur est survenue, veuillez réessayer.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <dotlottie-player class="mx-auto" src="https://lottie.host/16d7e423-292f-420b-afaf-4a24406c55fc/36tDfmP2fx.json"
+                                      background="transparent" speed="0.75" style="width: 300px; height: 300px;" loop
+                                      autoplay></dotlottie-player>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" defer></script>
-<script src="dist/js/floatingUi/core.js" defer></script>
-<script src="dist/js/floatingUi/dom.js" defer></script>
-<script src="dist/js/carousel.js" defer></script>
-<script src="dist/js/anim_element.js" defer></script>
-<script src="dist/js/send_email.js"></script>
-
-<script>
-    document.getElementById('mapContainer').addEventListener('click', function () {
-        let iframe = this.querySelector('iframe');
-        iframe.src = iframe.getAttribute('data-src');
-        iframe.style.display = 'block';
-        this.style.backgroundImage = 'none';
-    });
-</script>
 <div class="bg-dark justify-content-center p-5 mt-auto">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-md-block">
         <div class="navbar-collapse justify-content-center">
@@ -305,6 +316,36 @@
     </div>
 </div>
 
+<script src="https://kit.fontawesome.com/a1eb6e4109.js" crossorigin="anonymous"></script>
+<script src="dist/js/jQuery.js"></script>
+<script src="library/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/section_anchor.js"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" defer></script>
+<script src="dist/js/floatingUi/core.js" defer></script>
+<script src="dist/js/floatingUi/dom.js" defer></script>
+<script src="dist/js/carousel.js" defer></script>
+<script src="dist/js/anim_element.js" defer></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("EAOlP_KtZFgh-f39I");
+    })();
+</script>
+<script src="dist/js/send_email.js"></script>
+
+<!-- Google map -->
+<script>
+    document.getElementById('mapContainer').addEventListener('click', function () {
+        let iframe = this.querySelector('iframe');
+        iframe.src = iframe.getAttribute('data-src');
+        iframe.style.display = 'block';
+        this.style.backgroundImage = 'none';
+    });
+</script>
 
 </body>
 </html>
