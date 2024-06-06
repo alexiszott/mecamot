@@ -18,7 +18,7 @@
 
             <!-- Mobile -->
             <div class="mx-auto d-block d-md-none">
-                <img src="img/others/logo_mecamot.svg" style="width: 200px">
+                <img src="img/others/logo_mecamot.svg" style="width: 200px" alt="logo mecamot">
             </div>
 
             <!-- Toggler/collapsibe Button -->
@@ -29,7 +29,7 @@
 
             <!-- PC -->
             <div class="float-start mx-5 text-center d-none d-md-block ">
-                <img src="img/others/logo_mecamot.svg" style="width: 250px">
+                <img src="img/others/logo_mecamot.svg" style="width: 250px" alt="logo_mecamot">
             </div>
 
             <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarToggleMobile">
@@ -124,13 +124,13 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/motoculture/motoculture_1.jpg" class="d-block w-100 rounded-3" alt="...">
+                            <img src="img/motoculture/motoculture_1.jpg" class="d-block w-100 rounded-3" alt="image de motoculture">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/motoculture/motoculture_2.jpg" class="d-block w-100 rounded-3" alt="...">
+                            <img src="img/motoculture/motoculture_2.jpg" class="d-block w-100 rounded-3" alt="image de motoculture">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/motoculture/motoculture_3.jpg" class="d-block w-100 rounded-3" alt="...">
+                            <img src="img/motoculture/motoculture_3.jpg" class="d-block w-100 rounded-3" alt="image de motoculture">
                         </div>
                     </div>
                 </div>
@@ -150,14 +150,14 @@
         <div class="container-fluid p-md-5">
             <div class="row d-flex flex-row justify-content-around flex-sm-wrap">
                 <div class="title col-md-4 d-flex flex-column justify-content-between " id="text_moto">
-                    <p class='d-none my-auto d-md-block h2' id="justify">Nous sommes votre destination
+                    <p class='d-none my-auto d-md-block h2 justify_text'>Nous sommes votre destination
                         de <span class="surligner">confiance</span> pour la <span
                                 class="surligner">réparation</span>, <span class="surligner">l'entretien</span> et
                         la <span class="surligner">vente de pièces détachées</span> pour votre moto.
                         <br><br>Trouvez <span class="surligner">tout ce dont vous avez besoin</span> pour garder
                         votre machine en <span class="surligner">parfait état</span> et prête à prendre la route.
                     </p>
-                    <p class='pt-5 px-5 d-block d-md-none' id="justify">Nous sommes votre destination
+                    <p class='pt-5 px-5 d-block d-md-none justify_text'>Nous sommes votre destination
                         de <span class="surligner">confiance</span> pour la <span
                                 class="surligner">réparation</span>, <span class="surligner">l'entretien</span> et
                         la <span class="surligner">vente de pièces détachées</span> pour votre moto.
@@ -168,7 +168,7 @@
                 <div class='col-md-4 px-5 y-auto justify-content-center'>
                     <img src="img/moto/moto_1.jpg" id="moto_img"
                          class="d-block w-100 shadow rounded-3"
-                         alt="">
+                         alt="image de moto">
                 </div>
             </div>
         </div>
@@ -216,8 +216,7 @@
                     <form id="contact-form">
                         <tr>
                             <th>
-                                <input class='m-2 form-control' type='text' placeholder='Nom' name='name_contact'
-                                       id="name_contact">
+                                <input class='m-2 form-control' type='text' placeholder='Nom' name='name_contact' id="name_contact">
                             </th>
                         </tr>
                         <tr>
@@ -228,7 +227,7 @@
                         </tr>
                         <tr>
                             <th>
-                                    <textarea class='m-2 form-control' type='text' placeholder='Message *' rows='7'
+                                    <textarea class='m-2 form-control' placeholder='Message *' rows='7'
                                               name='texte_contact' id="texte_contact" required></textarea>
                             </th>
                         </tr>
@@ -329,8 +328,8 @@
 <script src="dist/js/floatingUi/dom.js" defer></script>
 <script src="dist/js/carousel.js" defer></script>
 <script src="dist/js/anim_element.js" defer></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
     (function () {
         emailjs.init("EAOlP_KtZFgh-f39I");
     })();

@@ -24,7 +24,7 @@ a.nav-link {
     font-size: 1.5em;
 }
 
-a{
+a {
     cursor: pointer;
     text-decoration: none;
 }
@@ -33,29 +33,31 @@ a{
     color: var(--dark-green);
 }
 
-#justify {
+#justify_text {
     text-align: justify;
     text-justify: inter-word;
 }
 
 .shadow-big {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .shadow-big-txt {
+    -webkit-text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /* Nav bar */
 
 @media (pointer: coarse) {
-    .dropdown-menu{
+    .dropdown-menu {
         background-color: transparent;
         border: none;
         transition: all 0.5s;
     }
 
-    .dropdown-item{
+    .dropdown-item {
         color: white;
         font-size: 1.5em;
         text-decoration: none;
@@ -84,11 +86,11 @@ a{
     width: 100%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: #1a1d20;
 }
 
-.dropdown-item{
+.dropdown-item {
     color: white;
     font-size: 1.2em;
     text-decoration: none;
@@ -119,7 +121,6 @@ a{
 
 /* medium and up screens */
 @media (min-width: 768px) {
-
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
         transform: translateX(25%);
@@ -147,6 +148,7 @@ a{
     color: var(--whiteish);
     display: grid;
     place-items: center;
+    -webkit-animation: movingBackground 10s linear infinite;
     animation: movingBackground 10s linear infinite;
     z-index: -5;
 }
@@ -156,8 +158,17 @@ a{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: -1;
+}
+
+@-webkit-keyframes movingBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: var(--backgroundSize) var(--backgroundSize);
+    }
 }
 
 @keyframes movingBackground {
@@ -180,6 +191,7 @@ a{
     background-position: center;
     cursor: pointer;
     border-radius: 0.5rem;
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 .map-container iframe {
@@ -191,5 +203,6 @@ a{
     height: 100%;
     border: 0;
     border-radius: 0.5rem;
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
